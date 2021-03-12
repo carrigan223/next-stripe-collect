@@ -1,0 +1,25 @@
+[
+    {
+        "title": "Chase Young",
+        "description": "Chase Young Card",
+        "image": "/images/d1.jpg",
+        "price": 0.01,
+        "id": "price_1IUIcUBlw6J01SCgxxqQu4n9"
+
+    },
+    {
+        "title": "Gleyber Torres",
+        "description": "Gleyber Torres Card",
+        "image": "/images/d2.jpg",
+        "price": 0.01,
+        "id": "price_1IUIdOBlw6J01SCgy2Xri58p"
+
+    },
+    {
+        "title": "Jasson Dominguez",
+        "description": "Jason Dominguez Card",
+        "image": "/images/d3.jpg",
+        "price": 0.01,
+        "id": "price_1IUIdwBlw6J01SCgYIrLONVi"
+    }
+]
