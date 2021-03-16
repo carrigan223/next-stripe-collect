@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { FaShoppingCart } from "react-icons/fa";
-
+import Link from "next/link";
 import products from "../products.json"; //JSON list of products
 import { useCart } from "../hooks/use-cart"; //we are bringing in our state from react context
 
@@ -44,24 +44,26 @@ const Home = () => {
             const { title, price, image, description, id } = product;
             return (
               <li key={id} className={styles.card}>
-                <div>
-                  <img src={image} alt={description} />
-                  <h3>{title}</h3>
-                  <p>{description}</p>
-                  <p>${price.toFixed(2)}</p>
-                  <p>
-                    <button
-                      className={styles.button}
-                      onClick={() => {
-                        addToCart({
-                          id,
-                        });
-                      }}
-                    >
-                      Add To Cart
-                    </button>
-                  </p>
-                </div>
+                <Link href={`/products/${id}`}>
+                  <a>
+                    <img src={image} alt={description} />
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                    <p>${price.toFixed(2)}</p>
+                    <p>
+                      <button
+                        className={styles.button}
+                        onClick={() => {
+                          addToCart({
+                            id,
+                          });
+                        }}
+                      >
+                        Add To Cart
+                      </button>
+                    </p>
+                  </a>
+                </Link>
               </li>
             );
           })}
