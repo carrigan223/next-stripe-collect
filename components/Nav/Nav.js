@@ -11,9 +11,11 @@ const Nav = () => {
         <a className={styles.navTitle}>Crowes Cards</a>
       </Link>
       <p className={styles.navCart}>
-        <button>
-          <FaShoppingCart /> $ {subtotal.toFixed(2)}
-        </button>
+        <Link href="/cart">
+          <a>
+            <FaShoppingCart /> $ {subtotal.toFixed(2)}
+          </a>
+        </Link>
       </p>
     </nav>
   );

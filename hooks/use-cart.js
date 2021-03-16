@@ -71,6 +71,18 @@ const useCartState = () => {
     });
   };
 
+  //function for updating cart state by specific quantity
+  const updateItem = ({ id, quantity }) => {
+    setCart((prev) => {
+      let cartState = { ...prev };
+
+      if (cartState.products[id]) {
+        cartState.products[id].quantity = quantity;
+      }
+      return cartState;
+    });
+  };
+
   //this function is takeing in our cart and sending it to stripe for checkout
   const checkout = () => {
     initiateCheckout({
@@ -90,6 +102,8 @@ const useCartState = () => {
     itemQuantity,
     addToCart,
     checkout,
+    cartItems,
+    updateItem,
   };
 };
 
