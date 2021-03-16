@@ -2,10 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family:  Helvetica, sans-serif;
-  background-color: black;
-  color: white;
-    
+  font-family: Helvetica, sans-serif;
+  background-color: white;
+  color: black;
 }
 
 a {
@@ -19,4 +18,15 @@ a {
 
 img {
   max-width: 100%;
+}
+
+.button {
+  width: 6rem;
+  height: 2rem;
+  font-family: inherit;
+  background-color: #ff5910;
+  border-radius: 0.2em;
+  border: none;
+  color: black;
+  box-shadow: 0 3px 6px rgba(0, 45, 114, 0.9);
 }
